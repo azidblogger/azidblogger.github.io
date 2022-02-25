@@ -1941,6 +1941,7 @@ function tampilkanCOD() {
     localStorage.setItem('itemUser', JSON.stringify(itemArray));
     const data = JSON.parse(localStorage.getItem('itemUser'));
     let hasil = data[0];
+console.log(hasil);
   if (hasil != undefined){
     var dataKurir = hasil.kurir;
     //var dataJarak = hasil.jarak;
@@ -1956,7 +1957,7 @@ function tampilkanCOD() {
     $(".data-ongkos").html(angkaToRp(dataHarga));
     simpleCart({
 	    shippingCustom: function () {
-		    var total = dataHarga;
+		    var total = dataHarga/1;
 		    return total;
 	    },
     });  
