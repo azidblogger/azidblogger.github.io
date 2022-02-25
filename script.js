@@ -2044,7 +2044,7 @@ if (urlHome + urlPathname == urlForm){
 		   window.open(checkoutWA,'_blank');
 		   localStorage.removeItem('simpleCart_items');
 		   localStorage.removeItem('itemUser');
-		   window.location.href = urlHome + "/produk";
+		   window.location.href = urlHome;
 		   return false;
 	   }	   
    }
