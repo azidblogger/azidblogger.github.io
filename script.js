@@ -3,9 +3,9 @@ var urlParameter = new URL(url_string);
 var urlHome = urlParameter.origin;
 var urlPathname = urlParameter.pathname;
 var urlOriginal = urlParameter.hostname;
-var urlDelivery = urlHome + "/produk/checkout";
-var urlCOD = urlHome+ "/produk/checkout/cod.html";
-var urlForm = urlHome + "/produk/checkout/form.html";
+var urlDelivery = urlHome + "/delivery.html";
+var urlCOD = urlHome+ "/cod.html";
+var urlForm = urlHome + "/form.html";
 var hpAdmin = "6289677337414";
 var formVoucher = "toko:20000";
 var minimumVoucher = "100000";
@@ -120,9 +120,12 @@ $(document).ready(function ($) {
 		    }
 	    }
     });
-    $(".form-checkout .tombol-close").click(function () {
-        window.location.href = urlHome + "/produk";
-    });		
+    $(".form-checkout .tombol-close, .tombol-lanjut .home").click(function () {
+        window.location.href = urlHome;
+    });
+    $(".tombol-lanjut .lanjut").click(function () {
+        window.location.href = urlForm;
+    });
     $(".button-tab button").on("click", function (a) {
         a.preventDefault();
         $(this).addClass("active");
